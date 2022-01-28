@@ -7,7 +7,7 @@
     (let ((val nil))
       (lambda ()
         (when thunk
-          (setq val (funcall thunk))
+          (setq val (funcall thunk nil))
           (setq thunk nil))
         val))))
 
